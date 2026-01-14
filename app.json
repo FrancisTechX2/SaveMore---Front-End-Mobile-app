@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "SaveMore",
+    "slug": "SaveMore",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash-screen.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#EAECEF"
+    },
+    "scheme": "savemore",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F9FAFB",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/images/icon.png",
+      "dark": {
+        "icon": "./assets/images/icon-dark.png"
+      },
+      "bundleIdentifier": "com.savemore.SaveMore",
+      "splash": {
+        "image": "./assets/images/splash-screen.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#EAECEF",
+        "tabletImage": "./assets/images/splash-screen.png",
+        "dark": {
+          "image": "./assets/images/splash-screen-dark.png",
+          "backgroundColor": "#1A1A1A",
+          "tabletImage": "./assets/images/splash-screen-dark.png"
+        }
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundColor": "#E6F4FE"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.savemore.SaveMore"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.ico"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-screen.png",
+          "imageResizeMode": "cover",
+          "backgroundColor": "#EAECEF",
+          "dark": {
+            "image": "./assets/images/splash-screen-dark.png",
+            "backgroundColor": "#1A1A1A"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "updates": {
+      "enabled": false
+    }
+  }
+}
