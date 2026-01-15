@@ -36,7 +36,7 @@ export default function TabLayout() {
     const tab = segments?.[1];
     if (typeof tab !== 'string') return;
 
-    const allowedTabs = new Set(['home', 'plans', 'plus', 'report', 'account']);
+    const allowedTabs = new Set(['home', 'plans', 'report', 'account']);
     if (!allowedTabs.has(tab)) return;
 
     const prev = lastTabRef.current;
@@ -65,8 +65,8 @@ export default function TabLayout() {
     );
   }
 
-  // iOS 26+ (and simulators): NativeTabs liquid-glass bar with PLUS included.
-  // Colors: black by default, orange (#FF6F00) when selected
+  // iOS 26+ (and simulators): NativeTabs liquid-glass bar.
+  // Colors: black by default, orange (#FF6F00) when selected.
   return (
     <NativeTabs
       blurEffect={reduceTransparencyEnabled ? 'none' : 'systemMaterial'}
@@ -76,12 +76,6 @@ export default function TabLayout() {
         selected: '#FF6F00',
       }}
     >
-      <NativeTabs.Trigger name="plus">
-        {/* PLUS first, same sizing, visually distinct via circle */}
-        <Icon sf={{ default: 'plus.circle', selected: 'plus.circle.fill' }} />
-        <Label hidden />
-      </NativeTabs.Trigger>
-
       <NativeTabs.Trigger name="home">
         <Icon sf={{ default: 'house', selected: 'house.fill' }} />
         <Label>Home</Label>
